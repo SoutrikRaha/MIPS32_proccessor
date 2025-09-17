@@ -9,4 +9,3 @@ The project was developed and simulated in **Xilinx Vivado** (no FPGA hardware u
 - `screenshots/` – Simulation results and waveform 
 Simulation was run in Vivado Behavioral Simulation.  
 Here is an example waveform of instruction execution:
-
