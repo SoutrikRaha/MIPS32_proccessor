@@ -6,19 +6,7 @@ The project was developed and simulated in **Xilinx Vivado** (no FPGA hardware u
 ## 📂 Project Structure
 - `src/` – Synthesizable design files (MIPS32 pipeline implementation)
 - `tb/` – Testbench for simulation
-- `screenshots/` – Simulation results and waveform captures
-
-## 🖥️ Simulation
+- `screenshots/` – Simulation results and waveform 
 Simulation was run in Vivado Behavioral Simulation.  
 Here is an example waveform of instruction execution:
 
-![Pipeline Simulation](screenshots/waveform_1.png)
-
-## 🛠️ Tools Used
-- Xilinx Vivado 202x.x
-- Verilog HDL
-- GTKWave (optional, for viewing `.vcd` files)
-
-## 📖 Notes
-- No FPGA board was used – this is **simulation-only**.
-- The testbench preloads memory with a small program and prints register contents.
