@@ -18,7 +18,6 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
 module test_mips32;
 reg clk1, clk2;
 integer k;
@@ -28,9 +27,23 @@ initial begin
     clk1 = 0;
     clk2 = 0;
 end
-always #5 clk1 = ~clk1;   // clk1 period = 10ns
-always #5 clk2 = ~clk2;   // clk2 period = 10ns (can phase shift if required)
-// Program and Initialization
+initial begin
+    clk1 = 0;
+    forever begin
+        clk1 = 1; #2.5;
+        clk1 = 0; #7.5;
+    end
+end
+
+initial begin
+    clk2 = 0;
+    #5;
+    forever begin
+        clk2 = 1; #2.5;
+        clk2 = 0; #7.5;
+    end
+end
+// Program and Initialization   
 initial begin
     for (k=0; k<31; k=k+1)
         mips.Reg[k] = k;
